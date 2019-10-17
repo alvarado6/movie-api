@@ -1,0 +1,22 @@
+{
+    "name": "movie-api",
+    "version": 2,
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@now/node" 
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/index.js"
+        }
+    ],
+    "env":{
+        "DB_USER": "@movie-api-db-user",
+        "DB_PASSWORD": "@movie-api-db-password",
+        "DB_HOST": "@movie-api-db-host",
+        "DB_NAME": "@movie-api-db-name"
+    }
+}
